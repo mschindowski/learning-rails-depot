@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %title LearningRailsDepot
+    = stylesheet_link_tag 'scaffold'
+    = stylesheet_link_tag 'depot', :media => 'all'
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+  %body#store
+    #banner
+      %a{:href => '/'}
+        = image_tag 'logo.png', :border => 0
+      = @page_title || 'Pragmatic Bookshelf'
+    #columns
+      #side
+        %a{:href => '/'} Home
+        %br
+        %a{:href => '/faq'} Questions 
+        %br
+        %a{:href => '/news'} News
+        %br
+        %a{:href => '/contact'} Contact
+      #main
+        = yield
