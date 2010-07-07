@@ -1,0 +1,5 @@
+%p#notice= notice
+%h2 Your Pragmatic Cart
+%ul
+  - for item in @cart.line_items
+    %li= item.product.title
