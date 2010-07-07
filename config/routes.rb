@@ -1,4 +1,8 @@
 LearningRailsDepot::Application.routes.draw do |map|
+  resources :line_items
+
+  resources :carts
+
   get "store/index"
 
   resources :products

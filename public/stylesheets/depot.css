@@ -46,6 +46,7 @@
   padding-bottom: 1em;
   width: 12em;
   background: #141 ;
+  color: #fff;
 }
 #side a {
   color: #bfb ;
@@ -147,4 +148,8 @@
   color: #44a;
   font-weight: bold;
   margin-right: 2em;
+}
+
+#store .entry form, #store .entry form div {
+  display: inline;
 }
