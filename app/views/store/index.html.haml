@@ -12,3 +12,9 @@
     .price_line
       %span.price= number_to_currency product.price, :unit => 'CHF', :format => "%u %n"
       = button_to 'Add to Cart', line_items_path(:product_id => product)
+
+- @lineitemstest.each do |testitem|
+  .testitem
+    = testitem.product_id
+    \:
+    = testitem.cart_id
