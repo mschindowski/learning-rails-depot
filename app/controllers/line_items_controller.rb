@@ -79,7 +79,13 @@ class LineItemsController < ApplicationController
     @line_item.destroy
 
     respond_to do |format|
-      format.html { redirect_to(line_items_url) }
+      format.html { 
+        if @line_item.cart.line_items.length > 0
+          redirect_to(@line_item.cart)
+        else
+          redirect_to(store_url, :notice => 'Your cart is currently empty')
+        end
+      }
       format.xml  { head :ok }
     end
   end
