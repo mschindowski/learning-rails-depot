@@ -5,6 +5,7 @@ class StoreController < ApplicationController
     @products = Product.all
     #@lineitemstest = line_items.where(:product_id => product_id).first # felipe fragen!
     @lineitemstest = LineItem.all
+    @cart = find_or_create_cart
   end
 
   def increment_count

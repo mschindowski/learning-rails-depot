@@ -1,0 +1,8 @@
+%tr{:id => line_item == @current_item ? 'current_item' : nil}
+  %td{:valign => :top} #{line_item.quantity}&times;
+  %td 
+    = line_item.product.title
+  %td.item_price{:valign => :top}
+    = number_to_currency line_item.total_price
+  %td{:valign => :top}
+    = link_to '[X]', line_item, :method => :delete, :confirm => 'Are you sure?'
